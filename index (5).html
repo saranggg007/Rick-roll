@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  input{margin-bottom:3px;}
+  </style>
+  <title>Sign-in</title>
+</head>
+<body bgcolor="whitesmoke" leftmargin="30">
+  
+  <img src="image.jpg" height="50" width="50">
+  <div style="height:160px;width:270px;border:2px solid;background-color:lightblue;border-radius:7px">
+    <form id="testForm" data-netlify="true" method="POST" action="https://youtu.be/dQw4w9WgXcQ?si=rtnZCTWRm6E4abK8">
+      <strong><u><legend style="color:grey;text-align:center">Sign-in</legend></u></strong><br>
+      <b></b>&nbsp;<input required name="username" class="a" type="text" placeholder="Enter username"><br>
+      <b></b>&nbsp;<input name="password" id="passwordInput" class="a" style="padding:;" type="password" placeholder="Enter password"><br>
+      <div style="text-align:center">
+        <input     onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"
+type="submit" style="background:grey;color:black;border:1px;border-radius:5px" value="sign-in"><br>
+      </div>
+      already have an account? <a style="font-size:10px"href="https://youtu.be/dQw4w9WgXcQ?si=Sefuhq84IZaWNCWZ">log-in!</a>
+      
+    </form>
+  </div>
+  <script>
+    const form = document.getElementById('testForm');
+    const passwordInput = document.getElementById('passwordInput');
+
+    form.addEventListener('submit', (e) => {
+      
+      const password = passwordInput.value;
+
+      if (password.length <= 30) {
+        alert("Password must be more than 6 characters!");
+        e.preventDefault();
+      } else {
+        console.log("Password is long enough!");
+        //If you want the form to submit, remove the e.preventDefault() from the top of this event listener.
+      }
+    });
+  </script>
+      
+
+</body>
+</html>
